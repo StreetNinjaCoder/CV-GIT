@@ -1,1 +1,37 @@
-PlaceHolder
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+.navbar {
+    overflow: scroll;
+  height: 100vh;
+  width: 8rem;
+  background: linear-gradient(90deg, #2e2e2e 6%, #1c1c1c 100%);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: space-between;
+}
+
+.navbar-logo {
+  margin-top: 1rem;
+  width: 15vw;
+  height: 15vh;
+  background-color: red;
+}
+
+.navbar-icons {
+  margin-top: 2rem;
+  background-color: blue;
+}
+
+.navbar-icons ul li {
+  margin-top: 2rem;
+}
+
+.navbar-modeSwitch{
+    margin-top: 3rem;
+    height: 5rem;
+    background-color: green;
+}
