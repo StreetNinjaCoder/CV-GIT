@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:200,300,regular,500,600,700);
+
 *,
 ::before,
 ::after {
@@ -5,72 +7,60 @@
 }
 
 body {
-  padding-top: 11rem;
+  padding-top: 8rem;
   margin: 0;
-
-  color: white;
+  font-family: "Oswald", Helvetica, sans-serif;
 }
 
 .navbar {
   padding-left: 4rem;
   padding-right: 4rem;
-  background: linear-gradient(0deg, #3e5671 0%, #657e9a 100%);
+
+  background: linear-gradient(0deg, rgb(54, 55, 56) 0%, #787878 100%);
   padding-bottom: 0.2rem;
-  padding-top: 0.2rem;
+  padding-top: 0.4rem;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 
   position: fixed;
   top: 0;
   width: 100%;
 
+  color: rgb(242, 242, 242);
 }
 
-.navigation {
+.enlaces {
+  margin-left: auto;
+  display: flex;
+}
 
-  height: 2rem;
-  border-radius: 1rem;
+.boton {
+  height: 3rem;
+  border-radius: 0.2rem;
+  padding: 1.2rem;
+  background: linear-gradient(
+    260deg,
+    rgb(6, 110, 110) 0%,
+    rgb(7, 207, 207) 100%
+  );
+  margin: 0.4rem;
 
   display: flex;
   justify-content: space-around;
   align-items: center;
-  list-style: none;
-
-  
-}
-
-.navigation div{
-    border-radius: 1rem;
-    background: linear-gradient(260deg, rgb(6, 110, 110) 0%, rgb(7, 207, 207) 100%);
-    margin: 0.8rem;
-
-    box-shadow: -2px 2px rgb(206, 206, 206);
-
-    transition: all 300ms ease-in;
-    
-}
-
-.navigation div:hover{
-   box-shadow: -4px 4px rgb(196, 7, 7);
-    
-}
-
-
-.navigation div {
-  padding: 1rem;
 }
 
 .image img {
-  width: 4rem;
   height: 4rem;
+  background-color: rgba(240, 248, 255, 0.27);
 }
 
 .switch {
+  margin-left: 2rem;
   border-radius: 0.5rem;
   padding: 0.5rem;
-  background-color: grey;
 
   display: flex;
   justify-content: center;
