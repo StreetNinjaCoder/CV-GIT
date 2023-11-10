@@ -7,16 +7,17 @@
 }
 
 body {
-  padding-top: 8rem;
   margin: 0;
   font-family: "Oswald", Helvetica, sans-serif;
 }
+
+/*Cosas del NAVBAR*/
 
 .navbar {
   padding-left: 4rem;
   padding-right: 4rem;
 
-  background: linear-gradient(0deg, rgb(54, 55, 56) 0%, #787878 100%);
+  background: linear-gradient(180deg, rgb(4, 170, 170) 0%, rgb(2, 88, 88) 100%);
   padding-bottom: 0.2rem;
   padding-top: 0.4rem;
 
@@ -24,7 +25,7 @@ body {
   justify-content: space-evenly;
   align-items: center;
 
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
 
@@ -37,6 +38,8 @@ body {
 }
 
 .boton {
+  font-weight: 700;
+  letter-spacing: 1px;
   height: 3rem;
   border-radius: 0.2rem;
   padding: 1.2rem;
@@ -50,11 +53,26 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  transition: all 300ms ease-in;
+}
+
+.boton:hover {
+  text-shadow: -4px -2px #343434;
+  box-shadow: -4px -2px #343434;
+  background: linear-gradient(
+    260deg,
+    rgb(7, 207, 207) 0%,
+    rgb(6, 110, 110) 100%
+  );
+  background-size: 400% 400%;
 }
 
 .image img {
   height: 4rem;
   background-color: rgba(240, 248, 255, 0.27);
+
+  padding: 1rem;
 }
 
 .switch {
@@ -68,4 +86,103 @@ body {
 }
 .switch svg {
   color: blue;
+}
+
+/*Cosas del INICIO*/
+.inicio {
+  width: 100vw;
+  height: 92vh;
+  background-color: rgba(10, 202, 202, 0.24);
+  background-image: url(img/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: lighten;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: whitesmoke;
+}
+
+.presentacion {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  background: radial-gradient(circle at top, #109090 0%, #176769 100%);
+  background-size: 400% 400%;
+  width: 25rem;
+  height: 20rem;
+  animation: gradientAnim 10s both infinite;
+
+  text-align: center;
+}
+
+.presentacion div:nth-child(1) {
+  font-weight: 300;
+
+  font-size: 3rem;
+  margin-bottom: -1rem;
+}
+
+.presentacion div:nth-child(2) {
+  font-weight: 700;
+  font-size: 3rem;
+  text-shadow: 4px 4px #343434;
+  margin-bottom: 1rem;
+}
+
+.presentacion div:nth-child(3) {
+  font-weight: 100;
+  font-size: 1.8rem;
+  text-decoration: underline;
+}
+
+.boton-hero {
+  margin-top: 2rem;
+  width: 20rem;
+  height: 8rem;
+  font-size: 3rem;
+  border-radius: 4rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #109090;
+  text-shadow: -4px -2px #343434;
+  background: radial-gradient(circle at bottom, #49e4b0 0%, #1d7990 100%);
+  background-size: 400% 400%;
+}
+
+.boton-hero:hover {
+  animation: gradientAnim 1s ease infinite;
+}
+
+.boton-hero svg {
+  animation: flechita 2s infinite;
+}
+
+@keyframes gradientAnim {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes flechita {
+  0% {
+    transform: translate(0px, -10px);
+  }
+  100% {
+    transform: translate(0px, 15px);
+  }
 }
