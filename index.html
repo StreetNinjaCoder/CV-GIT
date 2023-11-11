@@ -5,113 +5,217 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <script src="code.js" defer></script>
     <title>David Gómez Vicente</title>
   </head>
 
   <body>
-    <nav class="navbar">
+    <header class="navbar">
       <div class="image">
         <img src="img/logo-upscale.png" alt="" />
       </div>
-      <div class="enlaces">
-        <div class="boton">Inicio</div>
-        <div class="boton">Sobre mi</div>
-        <div class="boton">Proyectos</div>
-      </div>
-      <div class="switch">
+      <nav class="enlaces">
+        <a href="#inicio"> <div class="boton">Inicio</div></a>
+        <a href="#sobremi"> <div class="boton">Sobre mi</div></a>
+        <a href="proyecto.html"> <div class="boton">Proyectos</div></a>
+        <a href="#contacta"> <div class="boton">Contactar</div></a>
+      </nav>
+      <div id="switch" class="switch switch-dark">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="icon icon-tabler icon-tabler-sun-filled"
-          width="44"
-          height="44"
+          class="icon icon-tabler icon-tabler-moon-filled"
+          width="32"
+          height="32"
           viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="#2c3e50"
+          stroke-width="2"
+          stroke="currentColor"
           fill="none"
           stroke-linecap="round"
           stroke-linejoin="round"
         >
-          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
           <path
-            d="M12 19a1 1 0 0 1 .993 .883l.007 .117v1a1 1 0 0 1 -1.993 .117l-.007 -.117v-1a1 1 0 0 1 1 -1z"
+            d="M12 1.992a10 10 0 1 0 9.236 13.838c.341 -.82 -.476 -1.644 -1.298 -1.31a6.5 6.5 0 0 1 -6.864 -10.787l.077 -.08c.551 -.63 .113 -1.653 -.758 -1.653h-.266l-.068 -.006l-.06 -.002z"
             stroke-width="0"
             fill="currentColor"
-          />
-          <path
-            d="M18.313 16.91l.094 .083l.7 .7a1 1 0 0 1 -1.32 1.497l-.094 -.083l-.7 -.7a1 1 0 0 1 1.218 -1.567l.102 .07z"
-            stroke-width="0"
-            fill="currentColor"
-          />
-          <path
-            d="M7.007 16.993a1 1 0 0 1 .083 1.32l-.083 .094l-.7 .7a1 1 0 0 1 -1.497 -1.32l.083 -.094l.7 -.7a1 1 0 0 1 1.414 0z"
-            stroke-width="0"
-            fill="currentColor"
-          />
-          <path
-            d="M4 11a1 1 0 0 1 .117 1.993l-.117 .007h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1z"
-            stroke-width="0"
-            fill="currentColor"
-          />
-          <path
-            d="M21 11a1 1 0 0 1 .117 1.993l-.117 .007h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1z"
-            stroke-width="0"
-            fill="currentColor"
-          />
-          <path
-            d="M6.213 4.81l.094 .083l.7 .7a1 1 0 0 1 -1.32 1.497l-.094 -.083l-.7 -.7a1 1 0 0 1 1.217 -1.567l.102 .07z"
-            stroke-width="0"
-            fill="currentColor"
-          />
-          <path
-            d="M19.107 4.893a1 1 0 0 1 .083 1.32l-.083 .094l-.7 .7a1 1 0 0 1 -1.497 -1.32l.083 -.094l.7 -.7a1 1 0 0 1 1.414 0z"
-            stroke-width="0"
-            fill="currentColor"
-          />
-          <path
-            d="M12 2a1 1 0 0 1 .993 .883l.007 .117v1a1 1 0 0 1 -1.993 .117l-.007 -.117v-1a1 1 0 0 1 1 -1z"
-            stroke-width="0"
-            fill="currentColor"
-          />
-          <path
-            d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z"
-            stroke-width="0"
-            fill="currentColor"
-          />
+          ></path>
         </svg>
       </div>
-    </nav>
-    <section class="inicio">
-      <main class="presentacion">
-        <div>Hola, soy</div>
-        <div>David Gómez</div>
-        <div>Programador de Aplicaciones Web</div>
-      </main>
-      <div class="boton-hero">
-        Conoceme<svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="icon icon-tabler icon-tabler-arrow-badge-down-filled"
-          width="44"
-          height="44"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="#2c3e50"
-          fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-          <path
-            d="M16.375 6.22l-4.375 3.498l-4.375 -3.5a1 1 0 0 0 -1.625 .782v6a1 1 0 0 0 .375 .78l5 4a1 1 0 0 0 1.25 0l5 -4a1 1 0 0 0 .375 -.78v-6a1 1 0 0 0 -1.625 -.78z"
-            stroke-width="0"
-            fill="currentColor"
-          />
-        </svg>
+    </header>
+    <main class="inicio" id="inicio">
+      <article class="presentacion">
+        <section>
+          <div>Hola, soy</div>
+          <div>David Gómez</div>
+          <div>Programador de Aplicaciones Web</div>
+        </section>
+      </article>
+      <article class="boton-hero">
+        <a href="#sobremi"
+          ><section>
+            Conoceme<svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-arrow-badge-down-filled"
+              width="44"
+              height="44"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="#2c3e50"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M16.375 6.22l-4.375 3.498l-4.375 -3.5a1 1 0 0 0 -1.625 .782v6a1 1 0 0 0 .375 .78l5 4a1 1 0 0 0 1.25 0l5 -4a1 1 0 0 0 .375 -.78v-6a1 1 0 0 0 -1.625 -.78z"
+                stroke-width="0"
+                fill="currentColor"
+              />
+            </svg></section
+        ></a>
+      </article>
+    </main>
+
+    <footer class="division" id="sobremi"></footer>
+
+    <main class="sobremi">
+      <article class="tituloSeccion">Sobre mi</article>
+      <div class="card">
+        <section class="datos">
+          <article class="mi-nombre">David Gómez Vicente</article>
+          <article class="subtitulo">
+            "El éxito no es la clave de la felicidad. La felicidad es la clave
+            del éxito. Si amas lo que haces, serás exitoso."
+          </article>
+          <article class="socials">
+            <div class="phone">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-device-mobile"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M6 5a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-14z"
+                ></path>
+                <path d="M11 4h2"></path>
+                <path d="M12 17v.01"></path>
+              </svg>
+            </div>
+            <div class="mail">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-at"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path>
+                <path
+                  d="M16 12v1.5a2.5 2.5 0 0 0 5 0v-1.5a9 9 0 1 0 -5.5 8.28"
+                ></path>
+              </svg>
+            </div>
+            <div class="git">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-brand-github"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
+                ></path>
+              </svg>
+            </div>
+            <div class="discord">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-brand-discord-filled"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M14.983 3l.123 .006c2.014 .214 3.527 .672 4.966 1.673a1 1 0 0 1 .371 .488c1.876 5.315 2.373 9.987 1.451 12.28c-1.003 2.005 -2.606 3.553 -4.394 3.553c-.732 0 -1.693 -.968 -2.328 -2.045a21.512 21.512 0 0 0 2.103 -.493a1 1 0 1 0 -.55 -1.924c-3.32 .95 -6.13 .95 -9.45 0a1 1 0 0 0 -.55 1.924c.717 .204 1.416 .37 2.103 .494c-.635 1.075 -1.596 2.044 -2.328 2.044c-1.788 0 -3.391 -1.548 -4.428 -3.629c-.888 -2.217 -.39 -6.89 1.485 -12.204a1 1 0 0 1 .371 -.488c1.439 -1.001 2.952 -1.459 4.966 -1.673a1 1 0 0 1 .935 .435l.063 .107l.651 1.285l.137 -.016a12.97 12.97 0 0 1 2.643 0l.134 .016l.65 -1.284a1 1 0 0 1 .754 -.54l.122 -.009zm-5.983 7a2 2 0 0 0 -1.977 1.697l-.018 .154l-.005 .149l.005 .15a2 2 0 1 0 1.995 -2.15zm6 0a2 2 0 0 0 -1.977 1.697l-.018 .154l-.005 .149l.005 .15a2 2 0 1 0 1.995 -2.15z"
+                  stroke-width="0"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+            <div class="instagram">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-brand-instagram"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"
+                ></path>
+                <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                <path d="M16.5 7.5l0 .01"></path>
+              </svg>
+            </div>
+          </article>
+        </section>
+        <section class="foto"></section>
+        <section class="resumen">
+          Como programador web, tengo experiencia en tecnologías Front-end y
+          Back-end. Destaco por mi capacidad para resolver problemas y mi
+          enfoque en la calidad del código.
+          <br />
+          Me apasiona la programación web y siempre busco oportunidades para
+          aprender y mejorar.
+
+          <div>Conoceme mejor:</div>
+
+          <a href="#habilidades"
+            ><div class="habilidad-boton">habilidades</div></a
+          >
+        </section>
+        
       </div>
-    </section>
-    <section class="sobremi"></section>
-    <section class="habilidades"></section>
-    <section class="portfolio"></section>
-    <section class="contacto"></section>
+    </main>
+    <footer class="division2" id="habilidades">
+
+    </footer>
+    <article class="habilidades" >
+    </article>
+    <article class="contacto"></article>
     <footer class="footer"></footer>
   </body>
 </html>

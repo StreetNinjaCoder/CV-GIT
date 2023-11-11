@@ -6,14 +6,45 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: "Oswald", Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.tituloSeccion {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: whitesmoke;
+  text-transform: uppercase;
+  font-size: 3rem;
+  text-shadow: -2px -2px#343434;
+  padding: 2rem;
+  background-color: #34343453;
 }
 
 /*Cosas del NAVBAR*/
+.navbar-space {
+  width: 100%;
+  height: 10vh;
+  bottom: 0;
+  display: hidden;
+  position: absolute;
+}
 
 .navbar {
+  z-index: 100;
   padding-left: 4rem;
   padding-right: 4rem;
 
@@ -25,18 +56,24 @@ body {
   justify-content: space-evenly;
   align-items: center;
 
-  position: sticky;
+  position: fixed;
   top: 0;
   width: 100%;
+  height: 10vh;
 
   color: rgb(242, 242, 242);
 }
 
+/*Enlaces Navbar*/
 .enlaces {
   margin-left: auto;
   display: flex;
+  cursor: pointer;
 }
-
+.enlaces a {
+  color: whitesmoke;
+  text-decoration: none;
+}
 .boton {
   font-weight: 700;
   letter-spacing: 1px;
@@ -58,7 +95,7 @@ body {
 }
 
 .boton:hover {
-  text-shadow: -4px -2px #343434;
+  text-shadow: -4px -2px 1px #343434;
   box-shadow: -4px -2px #343434;
   background: linear-gradient(
     260deg,
@@ -68,6 +105,7 @@ body {
   background-size: 400% 400%;
 }
 
+/*Logo*/
 .image img {
   height: 4rem;
   background-color: rgba(240, 248, 255, 0.27);
@@ -75,6 +113,7 @@ body {
   padding: 1rem;
 }
 
+/*Interructor modo oscuro*/
 .switch {
   margin-left: 2rem;
   border-radius: 0.5rem;
@@ -83,15 +122,36 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
-.switch svg {
-  color: blue;
+.switch-dark svg {
+  color: whitesmoke;
+  background-color: #043b3b;
+  border-radius: 2rem;
+  transition: all 300ms ease-in;
+}
+
+.switch-light svg {
+  color: gold;
+  background-color: #08d3d3;
+  border-radius: 2rem;
+  transition: all 300ms ease-in;
+}
+
+.switch svg:hover {
+  box-shadow: -4px -2px #343434;
+  background: linear-gradient(
+    260deg,
+    rgb(7, 207, 207) 0%,
+    rgb(6, 110, 110) 100%
+  );
+  background-size: 400% 400%;
 }
 
 /*Cosas del INICIO*/
 .inicio {
   width: 100vw;
-  height: 92vh;
+  height: 100vh;
   background-color: rgba(10, 202, 202, 0.24);
   background-image: url(img/hero.jpg);
   background-repeat: no-repeat;
@@ -104,7 +164,7 @@ body {
   flex-direction: column;
   color: whitesmoke;
 }
-
+/*Caja de presentacion*/
 .presentacion {
   display: flex;
   justify-content: center;
@@ -119,6 +179,7 @@ body {
   text-align: center;
 }
 
+/*Boton presentacion*/
 .presentacion div:nth-child(1) {
   font-weight: 300;
 
@@ -140,7 +201,7 @@ body {
 }
 
 .boton-hero {
-  margin-top: 2rem;
+  margin-top: 3rem;
   width: 20rem;
   height: 8rem;
   font-size: 3rem;
@@ -154,8 +215,13 @@ body {
   text-shadow: -4px -2px #343434;
   background: radial-gradient(circle at bottom, #49e4b0 0%, #1d7990 100%);
   background-size: 400% 400%;
-}
 
+  cursor: pointer;
+}
+.boton-hero a {
+  color: whitesmoke;
+  text-decoration: none;
+}
 .boton-hero:hover {
   animation: gradientAnim 1s ease infinite;
 }
@@ -164,6 +230,208 @@ body {
   animation: flechita 2s infinite;
 }
 
+/*Sobre mi*/
+.sobremi {
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: -3rem;
+
+  background: linear-gradient(200deg, teal 0%, cadetblue 100%);
+}
+
+/* Tarjeta presentacion*/
+.card {
+  width: 60rem;
+  height: 30rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+  padding-bottom: 2rem;
+}
+
+.datos {
+  width: 20rem;
+  height: 30rem;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+
+  background: linear-gradient(260deg, #343434 0%, #626060 100%);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mi-nombre {
+  width: 80%;
+  background: linear-gradient(
+    200deg,
+    rgb(70, 221, 221) 0%,
+    rgb(13, 100, 176) 100%
+  );
+  text-shadow: -4px -2px whitesmoke;
+  background-clip: text;
+  color: transparent;
+  text-align: right;
+  line-height: 3rem;
+  font-size: 2.6rem;
+  font-weight: 600;
+}
+
+.subtitulo {
+  margin-top: 2rem;
+  background: linear-gradient(
+    200deg,
+    rgb(70, 221, 221) 0%,
+    rgb(73, 158, 233) 100%
+  );
+  text-indent: 1rem;
+  background-clip: text;
+  color: transparent;
+  width: 80%;
+  font-weight: lighter;
+}
+
+.socials {
+  margin-top: 2rem;
+  border-top: 2px #26d69c solid;
+
+  height: 5rem;
+  width: 20rem;
+  border-bottom-left-radius: 3rem;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.socials div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    260deg,
+    rgb(6, 110, 110) 0%,
+    rgb(7, 207, 207) 100%
+  );
+
+  border-radius: 0.2rem;
+  padding: 0.4rem;
+
+  transition: all 300ms ease-in;
+}
+
+.socials div:hover {
+  padding: 0.6rem;
+  transform: translateY(-10px);
+  stroke: #26d69c;
+  color: #26d69c;
+
+  background: linear-gradient(
+    260deg,
+    rgb(7, 207, 207) 0%,
+    rgb(6, 110, 110) 100%
+  );
+}
+
+.foto {
+  width: 20rem;
+  height: 30rem;
+  background-image: url(img/sobremi.jpg);
+  background-position-x: 100%;
+  background-position-y: 90%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.resumen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  width: 20rem;
+  height: 30rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  color: whitesmoke;
+  background: linear-gradient(260deg, #626060 0%, #343434 100%);
+}
+.resumen div:nth-child(2) {
+  padding: 0.3rem;
+
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+
+.habilidad-boton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+
+  font-weight: bolder;
+
+  border-radius: 1rem;
+  width: 16rem;
+  height: 3rem;
+  background: linear-gradient(
+    260deg,
+    rgb(6, 110, 110) 0%,
+    rgb(7, 207, 207) 100%
+  );
+  color: whitesmoke;
+  text-shadow: 2px 2px #343434;
+
+  transition: all 500ms ease-in;
+}
+
+.habilidad-boton:hover {
+  background-size: 400% 400%;
+  transform: scale(120%);
+  animation: gradientAnim 1s ease infinite;
+}
+
+/*Seccion habilidades*/
+
+.habilidades {
+  width: 100vw;
+  height: 92vh;
+}
+
+/*Separadores*/
+.division {
+  background: linear-gradient(
+    180deg,
+    rgb(7, 207, 207) 0%,
+    rgb(6, 110, 110) 100%
+  );
+  padding: 3rem;
+  height: 2rem;
+  width: 100vw;
+}
+
+.division2 {
+  background: linear-gradient(
+    180deg,
+    rgb(7, 207, 207) 0%,
+    rgb(6, 110, 110) 100%
+  );
+  height: 2rem;
+  width: 100vw;
+}
+
+/* Animaciones */
 @keyframes gradientAnim {
   0% {
     background-position: 0% 50%;
@@ -182,7 +450,16 @@ body {
   0% {
     transform: translate(0px, -10px);
   }
-  100% {
+  25% {
+    transform: translate(0px, 0px);
+  }
+  50% {
     transform: translate(0px, 15px);
+  }
+  75% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform: translate(0px, -10px);
   }
 }
