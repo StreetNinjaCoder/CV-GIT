@@ -13,7 +13,7 @@ html {
 body {
   margin: 0;
   font-family: "Oswald", Helvetica, sans-serif;
-  overflow-x: hidden;
+  overflow-x: scroll;
 }
 
 a {
@@ -108,6 +108,11 @@ a {
     rgb(6, 110, 110) 100%
   );
   background-size: 400% 400%;
+  
+}
+
+.boton:active{
+box-shadow: inset 100rem 100rem rgba(245, 245, 245, 0.586);
 }
 
 /*Logo*/
@@ -226,6 +231,9 @@ a {
 
   cursor: pointer;
 }
+
+
+  
 .boton-hero a {
   color: whitesmoke;
   text-decoration: none;
@@ -233,6 +241,10 @@ a {
 .boton-hero:hover {
   animation: gradientAnim 1s ease infinite;
 }
+
+.boton-hero:active{
+  box-shadow: inset 100rem 100rem rgba(245, 245, 245, 0.586);
+  }
 
 .boton-hero svg {
   animation: flechita 2s infinite;
@@ -352,6 +364,10 @@ a {
   );
 }
 
+.socials div:active{
+  box-shadow: inset 100rem 100rem rgba(245, 245, 245, 0.586);
+  }
+
 /*Foto*/
 
 .foto {
@@ -419,11 +435,19 @@ a {
   animation: gradientAnim 1s ease infinite;
 }
 
+.habilidad-boton:active{
+  box-shadow: inset 100rem 100rem rgba(245, 245, 245, 0.586);
+  }
+
 /*Seccion habilidades*/
 
 .habilidades {
+  padding-top: 15rem;
+  padding-bottom: 15rem;
   width: 100vw;
-  height: 130vh;
+  height: 150vh;
+
+  background: linear-gradient(200deg, teal 0%, cadetblue 100%);
 
   display: flex;
   align-items: center;
@@ -431,17 +455,78 @@ a {
   flex-direction: column;
 }
 
-.grid-habilidades{
-background-color: red;
-width: 80%;
-height: 100%;
-
-display: grid;
+.grid-habilidades {
+  background-color: red;
+  width: 80rem;
+  height: 60rem;
+  gap: 1rem;
+  display: grid;
+  grid-template-areas:
+    "hf hf hb hb"
+    "hi hi hi hi";
 }
 
-.contacto {
+.grid-habilidades div {
+  height: 30rem;
+  background-color: #08d3d3;
+  border-radius: 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-habilidades div table {
+
+  background-color: #08d3d3;
+
+}
+
+.grid-habilidades div table:nth-child(3) {
+  height: 26rem;
+
+  background-color: #08d3d3;
+  border-radius: 1rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+.grid-habilidades div:nth-child(3) {
+  height: 26rem;
+
+  background-color: #08d3d3;
+  border-radius: 1rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+.habs-frontend {
+  grid-area: hf;
+}
+
+.habs-backend {
+  grid-area: hb;
+}
+
+.habs-ides {
+  grid-area: hi;
+}
+
+/*footer de la pagina*/
+
+.footer {
+  padding-top: 10rem;
   width: 100vw;
-  height: 92vh;
+  height: 20vh;
+
+  background-color: red;
+}
+
+/*Pagina mis proyectos*/
+
+.mis-proyectos {
+  width: 100vw;
+  height: 150vh;
 }
 
 /* Animaciones */
