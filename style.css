@@ -18,10 +18,11 @@ body {
 
 a {
   text-decoration: none;
+  color: whitesmoke;
 }
 
 .tituloSeccion {
-  margin-top: 3rem;
+  margin-top: 4rem;
   margin-bottom: 3rem;
   display: flex;
   align-items: center;
@@ -31,6 +32,8 @@ a {
   font-size: 3rem;
   text-shadow: -2px -2px#343434;
   padding: 2rem;
+  padding-left: 10rem;
+  padding-right: 10rem;
   background-color: #34343453;
 }
 
@@ -74,6 +77,8 @@ a {
   color: whitesmoke;
   text-decoration: none;
 }
+
+/*Botones NAV*/
 .boton {
   font-weight: 700;
   letter-spacing: 1px;
@@ -150,8 +155,9 @@ a {
 
 /*Cosas del INICIO*/
 .inicio {
+  padding-top: 10vh;
   width: 100vw;
-  height: 100vh;
+  height: 110vh;
   background-color: rgba(10, 202, 202, 0.24);
   background-image: url(img/hero.jpg);
   background-repeat: no-repeat;
@@ -200,6 +206,8 @@ a {
   text-decoration: underline;
 }
 
+/*Boton del inicio*/
+
 .boton-hero {
   margin-top: 3rem;
   width: 20rem;
@@ -232,22 +240,23 @@ a {
 
 /*Sobre mi*/
 .sobremi {
-  height: 100vh;
   width: 100vw;
+  padding-top: 4rem;
+  padding-bottom: 8rem;
+  gap: 2rem;
 
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: -3rem;
 
   background: linear-gradient(200deg, teal 0%, cadetblue 100%);
 }
 
 /* Tarjeta presentacion*/
 .card {
-  width: 60rem;
-  height: 30rem;
+  width: 80rem;
+  height: 40rem;
   border-radius: 1rem;
   display: flex;
   justify-content: center;
@@ -257,11 +266,13 @@ a {
   padding-bottom: 2rem;
 }
 
+/*Presentacion*/
 .datos {
-  width: 20rem;
-  height: 30rem;
+  width: 30rem;
+  height: 40rem;
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
+
 
   background: linear-gradient(260deg, #343434 0%, #626060 100%);
   display: flex;
@@ -281,8 +292,8 @@ a {
   background-clip: text;
   color: transparent;
   text-align: right;
-  line-height: 3rem;
-  font-size: 2.6rem;
+  line-height: 4rem;
+  font-size: 4rem;
   font-weight: 600;
 }
 
@@ -293,6 +304,7 @@ a {
     rgb(70, 221, 221) 0%,
     rgb(73, 158, 233) 100%
   );
+  font-size: 2rem;
   text-indent: 1rem;
   background-clip: text;
   color: transparent;
@@ -301,11 +313,11 @@ a {
 }
 
 .socials {
-  margin-top: 2rem;
+  margin-top: 4rem;
   border-top: 2px #26d69c solid;
 
-  height: 5rem;
-  width: 20rem;
+  height: 8rem;
+  width: 30rem;
   border-bottom-left-radius: 3rem;
 
   display: flex;
@@ -323,13 +335,14 @@ a {
   );
 
   border-radius: 0.2rem;
-  padding: 0.4rem;
+  padding: 1.3rem;
 
   transition: all 300ms ease-in;
 }
 
+
 .socials div:hover {
-  padding: 0.6rem;
+  padding: 1.5rem;
   transform: translateY(-10px);
   stroke: #26d69c;
   color: #26d69c;
@@ -341,15 +354,19 @@ a {
   );
 }
 
+/*Foto*/
+
 .foto {
-  width: 20rem;
-  height: 30rem;
+  width: 25rem;
+  height: 40rem;
   background-image: url(img/sobremi.jpg);
   background-position-x: 100%;
   background-position-y: 90%;
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+/*Resumen*/
 
 .resumen {
   display: flex;
@@ -360,8 +377,10 @@ a {
   padding-left: 2rem;
   padding-right: 2rem;
 
-  width: 20rem;
-  height: 30rem;
+  font-size: 1.6rem;
+
+  width: 25rem;
+  height: 40rem;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
   color: whitesmoke;
@@ -371,7 +390,7 @@ a {
   padding: 0.3rem;
 
   font-weight: 500;
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 
 .habilidad-boton {
@@ -384,7 +403,7 @@ a {
 
   border-radius: 1rem;
   width: 16rem;
-  height: 3rem;
+  height: 5rem;
   background: linear-gradient(
     260deg,
     rgb(6, 110, 110) 0%,
@@ -409,26 +428,9 @@ a {
   height: 92vh;
 }
 
-/*Separadores*/
-.division {
-  background: linear-gradient(
-    180deg,
-    rgb(7, 207, 207) 0%,
-    rgb(6, 110, 110) 100%
-  );
-  padding: 3rem;
-  height: 2rem;
+.contacto {
   width: 100vw;
-}
-
-.division2 {
-  background: linear-gradient(
-    180deg,
-    rgb(7, 207, 207) 0%,
-    rgb(6, 110, 110) 100%
-  );
-  height: 2rem;
-  width: 100vw;
+  height: 92vh;
 }
 
 /* Animaciones */
