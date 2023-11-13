@@ -48,7 +48,16 @@ stroke-linejoin="round"
     modo.classList.remove("switch-light");
   }
 }
+
+function hamburguesa() {
+  let menu = document.querySelector("#hamburguer");
+menu.classList.toggle("hamburguer-desplegado");
+}
+
 //MAIN
 
 let modo = document.querySelector("#switch");
 modo.addEventListener("click", cambiarModo);
+
+let hamburguer = document.querySelector("#boton-hamburguer");
+hamburguer.addEventListener("click", hamburguesa);
