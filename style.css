@@ -747,7 +747,6 @@ figure {
 
   .boton-hamburguer {
     display: contents;
-    
   }
 
   .boton-hamburguer svg {
@@ -766,27 +765,28 @@ figure {
   }
   .hamburguer-ani {
     position: absolute;
-    top: -500rem;
+    top: -100rem;
     display: flex;
     flex-direction: column;
     padding-left: 5rem;
     padding-right: 5rem;
     background-color: #10909088;
 
-    transition: all 400ms ease;
+    transition: all 200ms ease;
   }
 
 
   .hamburguer-desplegado {
     position: absolute;
-    top: 6rem;
+    top: 5rem;
     display: flex;
     flex-direction: column;
-    padding-top: 1rem;
+    padding-top: 2rem;
     padding-bottom: 1rem;
     padding-left: 5rem;
     padding-right: 5rem;
     background-color: #10909088;
+    
 
   }
 
