@@ -22,8 +22,10 @@ function cambiarModo() {
 
     modo.classList.remove("switch-dark");
     modo.classList.add("switch-light");
+    document.documentElement.setAttribute("data-modo", "light");
   } else {
     estado = "dark";
+    document.documentElement.removeAttribute("data-modo");
     modo.innerHTML = `<svg
 xmlns="http://www.w3.org/2000/svg"
 class="icon icon-tabler icon-tabler-moon-filled"
@@ -51,7 +53,7 @@ stroke-linejoin="round"
 
 function hamburguesa() {
   let menu = document.querySelector("#hamburguer");
-menu.classList.toggle("hamburguer-desplegado");
+  menu.classList.toggle("hamburguer-desplegado");
 }
 
 //MAIN

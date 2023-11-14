@@ -7,15 +7,96 @@
 }
 
 :root {
---gradiente-principal-a:rgb(4, 170, 170);
---gradiente-principal-b:rgb(4, 170, 170);
+  --gradiente-principal-a: rgb(3, 125, 125);
+  --gradiente-principal-b: rgb(2, 110, 110);
 
+  --gradiente-navbar-a: rgb(4, 170, 170);
+  --gradiente-navbar-b: rgb(2, 88, 88);
+  --letras-navbar: whitesmoke;
+  --gradiente-boton-navbar-a: rgb(6, 110, 110);
+  --gradiente-boton-navbar-b: rgb(7, 207, 207);
+  --hoover-boton: #343434;
+  --img-background: rgba(240, 248, 255, 0.234);
+
+  --texto-seccion: whitesmoke;
+  --sombra-seccion: #343434;
+  --fondo-seccion: #34343453;
+
+  --fondo-hero: rgba(10, 202, 202, 0.24);
+  --gradiente-hero-a: #3ec7c7;
+  --gradiente-hero-b: #024747;
+  --boton-hero-a: #49e4b0;
+  --boton-hero-b: #1d7990;
+
+  --gradiente-sobremi-a: #343434;
+  --gradiente-sobremi-b: #626060;
+  --boton-sobre-mi-a: rgb(6, 110, 110);
+  --boton-sobre-mi-b: rgb(7, 207, 207);
+  --minombre-a: rgb(70, 221, 221);
+  --minombre-b: rgb(13, 100, 176);
+  --subtitulo-a: rgba(70, 221, 221);
+  --subtitulo-b: rgb(73, 158, 233);
+
+  --color-tabla-front: #4b586b;
+  --color-tabla-end: rgb(104, 180, 143);
+  --color-tabla-ides: #b76666;
+  --cabecera-tabla: #6cb4b4;
+  --borde-tabla: rgb(93, 89, 89);
+  --fondo-cabecera: #6cb4b4;
+  --fondo-tabla: #abb5b5;
+  --fondo-tabla-conocimiento: rgba(71, 126, 91, 0.286);
+
+  --fondo-proyecto: rgba(66, 66, 66, 0.514);
+
+  --boton-hamburguer: whitesmoke;
+  --fondo-menu-hamburguer: #109090a0;
 }
 
-light:root{
+[data-modo="light"] {
+  --gradiente-principal-a: rgb(6, 184, 184);
+  --gradiente-principal-b: rgb(21, 112, 112);
 
+  --gradiente-navbar-a: rgb(36, 161, 161);
+  --gradiente-navbar-b: rgb(52, 175, 175);
+  --letras-navbar: #222;
+  --gradiente-boton-navbar-a: rgb(21, 232, 232);
+  --gradiente-boton-navbar-b: rgb(59, 163, 163);
+  --hoover-boton: #ddd;
+  --img-background: rgba(240, 248, 255, 0.234);
+
+  --texto-seccion: #333;
+  --sombra-seccion: #ddd;
+  --fondo-seccion: #9e9e9e;
+
+  --fondo-hero: rgba(10, 202, 202, 0.24);
+  --gradiente-hero-a: #3ec7c7;
+  --gradiente-hero-b: #024747;
+  --boton-hero-a: #49e4b0;
+  --boton-hero-b: #1d7990;
+
+  --gradiente-sobremi-a: rgb(127, 145, 141);
+  --gradiente-sobremi-b: rgb(153, 153, 153);
+  --boton-sobre-mi-a: rgb(39, 195, 195);
+  --boton-sobre-mi-b: rgb(11, 130, 130);
+  --minombre-a: rgb(70, 221, 221);
+  --minombre-b: rgb(13, 100, 176);
+  --subtitulo-a: rgb(39, 125, 125);
+  --subtitulo-b: rgb(6, 52, 92);
+
+  --color-tabla-front: #5f82b9;
+  --color-tabla-end: rgb(83, 194, 140);
+  --color-tabla-ides: #cc7e7e;
+  --cabecera-tabla: #62c1c1;
+  --borde-tabla: rgb(246, 246, 246);
+  --fondo-cabecera: #6cb4b4;
+  --fondo-tabla: #a7baba;
+  --fondo-tabla-conocimiento: rgba(96, 183, 128, 0.286);
+
+  --fondo-proyecto: rgba(200, 200, 200, 0.514);
+
+  --boton-hamburguer: whitesmoke;
+  --fondo-menu-hamburguer: #78aaaacd;
 }
-
 
 html {
   scroll-behavior: smooth;
@@ -26,12 +107,16 @@ body {
   font-family: "Oswald", Helvetica, sans-serif;
   overflow-x: scroll;
 
-  background: linear-gradient(90deg, var(--gradiente-principal-a) 0%, var(--gradiente-principal-b) 100%);
+  background: linear-gradient(
+    90deg,
+    var(--gradiente-principal-a) 0%,
+    var(--gradiente-principal-b) 100%
+  );
 }
 
 a {
   text-decoration: none;
-  color: whitesmoke;
+  color: var(--texto-seccion);
 }
 
 .tituloSeccion {
@@ -40,14 +125,14 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: whitesmoke;
-  text-shadow: -2px -2px#343434;
+  color: var(--texto-seccion);
+  text-shadow: -2px -2px var(--sombra-seccion);
   font-size: 3rem;
   text-transform: uppercase;
   padding: 2rem;
   padding-left: 10rem;
   padding-right: 10rem;
-  background-color: #34343453;
+  background-color: var(--fondo-seccion);
 }
 
 /*Cosas del NAVBAR*/
@@ -64,7 +149,11 @@ a {
   padding-left: 4rem;
   padding-right: 4rem;
 
-  background: linear-gradient(180deg, rgb(4, 170, 170) 0%, rgb(2, 88, 88) 100%);
+  background: linear-gradient(
+    180deg,
+    var(--gradiente-navbar-a) 0%,
+    var(--gradiente-navbar-b) 100%
+  );
   padding-bottom: 0.2rem;
   padding-top: 0.4rem;
 
@@ -76,8 +165,6 @@ a {
   top: 0;
   width: 100%;
   height: 10vh;
-
-  color: rgb(242, 242, 242);
 }
 
 /*Enlaces Navbar*/
@@ -88,7 +175,7 @@ a {
 }
 
 .enlaces a {
-  color: whitesmoke;
+  color: var(--letras-navbar);
   text-decoration: none;
 }
 
@@ -101,8 +188,8 @@ a {
   padding: 1.2rem;
   background: linear-gradient(
     260deg,
-    rgb(6, 110, 110) 0%,
-    rgb(7, 207, 207) 100%
+    var(--gradiente-boton-navbar-a) 0%,
+    var(--gradiente-boton-navbar-b) 100%
   );
   margin: 0.4rem;
 
@@ -114,12 +201,12 @@ a {
 }
 
 .boton:hover {
-  text-shadow: -4px -2px 1px #343434;
-  box-shadow: -4px -2px #343434;
+  text-shadow: -4px -2px 1px var(--hoover-boton);
+  box-shadow: -4px -2px var(--hoover-boton);
   background: linear-gradient(
     260deg,
-    rgb(7, 207, 207) 0%,
-    rgb(6, 110, 110) 100%
+    var(--gradiente-boton-navbar-b) 0%,
+    var(--gradiente-boton-navbar-a) 100%
   );
   background-size: 400% 400%;
 }
@@ -131,7 +218,7 @@ a {
 /*Logo*/
 .image img {
   height: 4rem;
-  background-color: rgba(240, 248, 255, 0.27);
+  background-color: var(--img-background);
 
   padding: 1rem;
 }
@@ -166,7 +253,7 @@ a {
 }
 
 .switch svg:hover {
-  box-shadow: -4px -2px #343434;
+  box-shadow: -4px -2px var(--hoover-boton);
   background: linear-gradient(
     260deg,
     rgb(7, 207, 207) 0%,
@@ -180,7 +267,7 @@ a {
   padding-top: 10vh;
   width: 100vw;
   height: 110vh;
-  background-color: rgba(10, 202, 202, 0.24);
+  background-color: var(--fondo-hero);
   background-image: url(img/hero.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -190,7 +277,7 @@ a {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: whitesmoke;
+  color: var(--texto-seccion);
 }
 /*Caja de presentacion*/
 .presentacion {
@@ -198,8 +285,12 @@ a {
   justify-content: center;
   flex-direction: column;
 
-  background: radial-gradient(circle at top, #109090 0%, #176769 100%);
-  background-size: 400% 400%;
+  background: radial-gradient(
+    circle at top,
+    var(--gradiente-hero-a) 20%,
+    var(--gradiente-hero-b) 100%
+  );
+  background-size: 200% 200%;
   width: 25rem;
   height: 20rem;
   animation: gradientAnim 10s both infinite;
@@ -218,7 +309,7 @@ a {
 .presentacion div:nth-child(2) {
   font-weight: 700;
   font-size: 3rem;
-  text-shadow: 4px 4px #343434;
+  text-shadow: 4px 4px var(--sombra-seccion);
   margin-bottom: 1rem;
 }
 
@@ -241,16 +332,19 @@ a {
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  background-color: #109090;
-  text-shadow: -4px -2px #343434;
-  background: radial-gradient(circle at bottom, #49e4b0 0%, #1d7990 100%);
+  text-shadow: -4px -2px var(--sombra-seccion);
+  background: radial-gradient(
+    circle at bottom,
+    var(--boton-hero-a) 0%,
+    var(--boton-hero-b) 100%
+  );
   background-size: 400% 400%;
 
   cursor: pointer;
 }
 
 .boton-hero a {
-  color: whitesmoke;
+  color: var(--texto-seccion);
   text-decoration: none;
 }
 .boton-hero:hover {
@@ -298,7 +392,11 @@ a {
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
 
-  background: linear-gradient(260deg, #343434 0%, #626060 100%);
+  background: linear-gradient(
+    260deg,
+    var(--gradiente-sobremi-a) 0%,
+    var(--gradiente-sobremi-b) 100%
+  );
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -309,10 +407,10 @@ a {
   width: 80%;
   background: linear-gradient(
     200deg,
-    rgb(70, 221, 221) 0%,
-    rgb(13, 100, 176) 100%
+    var(--minombre-a) 0%,
+    var(--minombre-b) 100%
   );
-  text-shadow: -4px -2px whitesmoke;
+  text-shadow: -4px -2px var(--texto-seccion);
   background-clip: text;
   color: transparent;
   text-align: right;
@@ -325,8 +423,8 @@ a {
   margin-top: 2rem;
   background: linear-gradient(
     200deg,
-    rgb(70, 221, 221) 0%,
-    rgb(73, 158, 233) 100%
+    var(--subtitulo-a) 0%,
+    var(--subtitulo-b) 100%
   );
   font-size: 2rem;
   text-indent: 1rem;
@@ -354,8 +452,8 @@ a {
   align-items: center;
   background: linear-gradient(
     260deg,
-    rgb(6, 110, 110) 0%,
-    rgb(7, 207, 207) 100%
+    var(--boton-sobre-mi-a) 0%,
+    var(--boton-sobre-mi-b) 100%
   );
 
   border-radius: 0.2rem;
@@ -372,8 +470,8 @@ a {
 
   background: linear-gradient(
     260deg,
-    rgb(7, 207, 207) 0%,
-    rgb(6, 110, 110) 100%
+    var(--boton-sobre-mi-b) 0%,
+    var(--boton-sobre-mi-a) 100%
   );
 }
 
@@ -410,8 +508,12 @@ a {
   height: 40rem;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
-  color: whitesmoke;
-  background: linear-gradient(260deg, #626060 0%, #343434 100%);
+  color: var(--texto-seccion);
+  background: linear-gradient(
+    260deg,
+    var(--gradiente-sobremi-b) 0%,
+    var(--gradiente-sobremi-a) 100%
+  );
 }
 .resumen div:nth-child(2) {
   padding: 0.3rem;
@@ -433,11 +535,11 @@ a {
   height: 4rem;
   background: linear-gradient(
     260deg,
-    rgb(6, 110, 110) 0%,
-    rgb(7, 207, 207) 100%
+    var(--boton-sobre-mi-a) 0%,
+    var(--boton-sobre-mi-b) 100%
   );
-  color: whitesmoke;
-  text-shadow: 2px 2px #343434;
+  color: var(--texto-seccion);
+  text-shadow: 2px 2px var(--sombra-seccion);
 
   transition: all 500ms ease-in;
 }
@@ -478,7 +580,7 @@ a {
 
 .grid-habilidades div {
   height: 40rem;
-  background-color: #4b586b;
+  background-color: var(--color-tabla-front);
   border-radius: 1rem;
 
   display: flex;
@@ -489,7 +591,7 @@ a {
 
 .grid-habilidades div:nth-child(2) {
   height: 40rem;
-  background-color: rgb(104, 180, 143);
+  background-color: var(--color-tabla-end);
   border-radius: 1rem;
 
   display: flex;
@@ -500,7 +602,7 @@ a {
 .grid-habilidades div:nth-child(3) {
   height: 30rem;
 
-  background-color: #b76666;
+  background-color: var(--color-tabla-ides);
   border-radius: 1rem;
   margin-left: 14rem;
   margin-right: 14rem;
@@ -520,24 +622,21 @@ a {
 /*Tablas habilidades*/
 
 .grid-habilidades div table {
-  background-color: #959595;
-  color: black;
+  color: var(--texto-seccion);
   padding: 2rem;
 }
 .grid-habilidades div table:nth-child(3) {
-  background-color: #959595;
-
   border-radius: 1rem;
   margin-left: 5rem;
   margin-right: 5rem;
 }
 
 .grid-habilidades div table caption {
-  color: whitesmoke;
+  color: var(--texto-seccion);
 
   text-transform: uppercase;
   font-size: 2rem;
-  text-shadow: -2px -2px#343434;
+  text-shadow: -2px -2px var(--sombra-seccion);
 }
 
 .grid-habilidades div table th {
@@ -545,11 +644,11 @@ a {
   padding: 1rem;
   padding-left: 3rem;
   padding-right: 3rem;
-
+  font-size: 1.5rem;
   font-weight: bold;
-  color: whitesmoke;
-  text-shadow: 2px 2px#343434;
-  border: 3px #343434 solid;
+  color: var(--texto-seccion);
+  text-shadow: 2px 2px var(--sombra-seccion);
+  border: 3px var(--borde-tabla) solid;
 }
 
 .grid-habilidades div table tr .vacio {
@@ -558,16 +657,17 @@ a {
 
 .grid-habilidades div table tr {
   text-align: center;
-  background-color: #6cb4b4;
+  background-color: var(--fondo-tabla);
 }
 
 .grid-habilidades div table td {
-  background-color: #abb5b5;
-  border: 3px #343434 solid;
+  background-color: var(--fondo-tabla) s;
+  border: 3px var(--sombra-seccion) solid;
+  text-shadow: -2px -2px var(--sombra-seccion);
 }
 
 .tabla-lenguajes tr td:nth-child(3) {
-  background-color: rgba(71, 126, 91, 0.286);
+  background-color: var(--fondo-tabla-conocimiento);
 }
 
 .grid-habilidades div table img {
@@ -575,33 +675,26 @@ a {
 }
 
 .tabla-ides tbody tr:nth-child(2) td {
-  background-color: rgba(71, 126, 91, 0.286);
+  background-color: var(--fondo-tabla-conocimiento);
 }
 
 .tabla-ides tbody tr:nth-child(4) td {
-  background-color: rgba(71, 126, 91, 0.286);
+  background-color: var(--fondo-tabla-conocimiento);
 }
 
 .tabla-ides th {
   font-size: 1.5rem;
-  text-shadow: 2px 2px whitesmoke;
-}
-
-.tabla-lenguajes th {
-  font-size: 1.5rem;
-
-  text-shadow: 2px 2px whitesmoke;
 }
 
 .tabla-ides tr td {
   font-size: 1.5rem;
-  text-shadow: 2px 2px whitesmoke;
+  text-shadow: 2px 2px var(--texto-seccion);
 }
 
 .tabla-lenguajes tr td {
   font-size: 1.5rem;
 
-  text-shadow: 2px 2px whitesmoke;
+  text-shadow: 2px 2px var(--texto-seccion);
 }
 
 /*Estrellas de rating*/
@@ -649,18 +742,21 @@ figure {
 .footer {
   margin-top: 20vh;
   width: 100vw;
-  height: 8rem;
+  height: 10rem;
 
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: linear-gradient(180deg, rgb(2, 88, 88) 0%, rgb(4, 170, 170) 100%);
+  background: linear-gradient(
+    180deg var(--gradiente-navbar-a) 0%,
+    var(--gradiente-navbar-b) 100%
+  );
 }
 
 .footertext {
   font-size: 2rem;
-  color: whitesmoke;
+  color: var(--texto-seccion);
 }
 
 /*Pagina mis proyectos*/
@@ -672,11 +768,11 @@ figure {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: whitesmoke;
+  color: var(--texto-seccion);
   text-transform: uppercase;
   font-size: 3rem;
-  text-shadow: -2px -2px#343434;
-  background-color: #34343453;
+  text-shadow: -2px -2px var(--sombra-seccion);
+  background-color: var(--fondo-seccion);
 }
 
 .mis-proyectos {
@@ -712,7 +808,7 @@ figure {
 }
 
 .proyecto-datos {
-  background-color: rgba(125, 118, 118, 0.635);
+  background-color: var(--fondo-proyecto);
   width: rem;
   height: 7.5rem;
   width: 35rem;
@@ -779,13 +875,13 @@ figure {
 }
 
 .ptitle {
-  color: whitesmoke;
-  text-shadow: -2px -2px#343434;
+  color: var(--texto-seccion);
+  text-shadow: -2px -2px var(--sombra-seccion);
   font-size: 2.2rem;
 }
 
 .pdesc {
-  color: whitesmoke;
+  color: var(--texto-seccion);
   font-size: 1.2rem;
   text-align: center;
   width: 80%;
@@ -842,7 +938,7 @@ figure {
   }
 
   .boton-hamburguer svg {
-    stroke: whitesmoke;
+    stroke: var(--boton-hamburguer);
     margin-left: 1.5rem;
     border-radius: 0.2rem;
     background-color: rgba(240, 248, 255, 0.375);
@@ -861,7 +957,7 @@ figure {
     flex-direction: column;
     padding-left: 5rem;
     padding-right: 5rem;
-    background-color: #10909088;
+    background-color: var(--fondo-menu-hamburguer);
 
     transition: all 200ms ease;
   }
@@ -875,7 +971,7 @@ figure {
     padding-bottom: 1rem;
     padding-left: 5rem;
     padding-right: 5rem;
-    background-color: #10909088;
+    background-color: var(--fondo-menu-hamburguer);
   }
 
   .boton {
