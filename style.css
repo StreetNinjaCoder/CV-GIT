@@ -6,6 +6,17 @@
   box-sizing: border-box;
 }
 
+:root {
+--gradiente-principal-a:rgb(4, 170, 170);
+--gradiente-principal-b:rgb(4, 170, 170);
+
+}
+
+light:root{
+
+}
+
+
 html {
   scroll-behavior: smooth;
 }
@@ -15,7 +26,7 @@ body {
   font-family: "Oswald", Helvetica, sans-serif;
   overflow-x: scroll;
 
-  background: linear-gradient(90deg, rgb(4, 170, 170) 0%, rgb(2, 88, 88) 100%);
+  background: linear-gradient(90deg, var(--gradiente-principal-a) 0%, var(--gradiente-principal-b) 100%);
 }
 
 a {
@@ -125,10 +136,9 @@ a {
   padding: 1rem;
 }
 
-.mImage{
-display: none;
+.mImage {
+  display: none;
 }
-
 
 /*Interructor modo oscuro*/
 .switch {
@@ -230,7 +240,7 @@ display: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
   background-color: #109090;
   text-shadow: -4px -2px #343434;
   background: radial-gradient(circle at bottom, #49e4b0 0%, #1d7990 100%);
@@ -253,6 +263,7 @@ display: none;
 
 .boton-hero svg {
   animation: flechita 2s infinite;
+  margin-left: 4rem;
 }
 
 /*Sobre mi*/
@@ -487,12 +498,12 @@ display: none;
   gap: 1rem;
 }
 .grid-habilidades div:nth-child(3) {
-  height: 26rem;
+  height: 30rem;
 
   background-color: #b76666;
   border-radius: 1rem;
-  margin-left: 5rem;
-  margin-right: 5rem;
+  margin-left: 14rem;
+  margin-right: 14rem;
 }
 
 .habs-frontend {
@@ -506,7 +517,6 @@ display: none;
 .habs-ides {
   grid-area: hi;
 }
-
 /*Tablas habilidades*/
 
 .grid-habilidades div table {
@@ -515,7 +525,6 @@ display: none;
   padding: 2rem;
 }
 .grid-habilidades div table:nth-child(3) {
-  height: 26rem;
   background-color: #959595;
 
   border-radius: 1rem;
@@ -565,7 +574,11 @@ display: none;
   width: 3rem;
 }
 
-.tabla-ides tbody tr:nth-child(3) td {
+.tabla-ides tbody tr:nth-child(2) td {
+  background-color: rgba(71, 126, 91, 0.286);
+}
+
+.tabla-ides tbody tr:nth-child(4) td {
   background-color: rgba(71, 126, 91, 0.286);
 }
 
@@ -791,36 +804,32 @@ figure {
 /*Media querys*/
 
 @media screen and (width <= 700px) {
-
-
-
-  body{
+  body {
     overflow-x: hidden;
   }
 
-  
-  a{
-  width: 20%;
+  a {
+    width: 20%;
   }
 
-  .navbar{
-    justify-content: center;
-  padding: 0rem;
+  .navbar {
+    justify-content: space-evenly;
+    padding: 0rem;
   }
-  .switch{
-  padding: 0rem;
-  }
-
-  .image{
-  display: none;
+  .switch {
+    padding: 0rem;
   }
 
-  .mImage{
-  display: contents;
+  .image {
+    display: none;
   }
 
-  .mImage img{
-  height: 4rem;
+  .mImage {
+    display: contents;
+  }
+
+  .mImage img {
+    height: 3rem;
   }
 
   /*Menu Hamburguesa*/
@@ -873,20 +882,148 @@ figure {
     height: 3rem;
     width: 20rem;
   }
+  /*Hero*/
+  .boton-hero {
+    border-radius: 1rem;
+    height: 4rem;
+    width: 8rem;
+    padding-right: 1.4rem;
+  }
+  .boton-hero svg {
+    animation: flechita 2s infinite;
+    margin-left: 0rem;
+  }
 
+  .conoceme {
+    display: none;
+  }
   /*Seccion*/
 
   .tituloSeccion {
     text-align: center;
   }
 
-  /*Seccion habilidades*/
-  
+  /*Seccion sobre mi*/
+  .sobremi {
+    width: 100vw;
+    padding-top: 4rem;
+    gap: 2rem;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  /* Tarjeta presentacion*/
+  .card {
+    width: 25rem;
+    height: 120rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    padding-bottom: 2rem;
+  }
+
+  /*Presentacion*/
+  .datos {
+    width: 25rem;
+    height: 50rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 0rem;
+    border-bottom-right-radius: 0rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .socials {
+    width: 25rem;
+    padding-left: 1rem;
+  }
+  .socials div {
+    border-radius: 0.2rem;
+    padding: 0rem;
+    margin-right: 1rem;
+  }
+
+  /*Foto*/
+
+  .foto {
+    width: 25rem;
+    height: 30rem;
+    background-position-x: 100%;
+    background-position-y: 35%;
+  }
+
+  /*Resumen*/
+
+  .resumen {
+    width: 25rem;
+    height: 40rem;
+    border-top-right-radius: 0rem;
+    border-top-left-radius: 0rem;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+  }
+
+  .habilidad-boton {
+    width: 16rem;
+    height: 6rem;
+
+    position: relative;
+
+    right: 5.7rem;
+  }
+
+  /*Seccion habilidades*/
+
+  .habilidades {
+    width: 100vw;
+    height: 300vh;
+  }
+
+  .grid-habilidades {
+    display: grid;
+    height: 160rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+    margin-bottom: 0rem;
+  }
+
+  .habs-frontend {
+    grid-area: 1 / 1 / 2 / 2;
+    padding: 0rem;
+    scale: 80%;
+  }
+
+  .habs-backend {
+    grid-area: 2 / 1 / 3 / 2;
+    scale: 80%;
+  }
+
+  .habs-ides {
+    grid-area: 3 / 1 / 4 / 2;
+    scale: 55%;
+  }
+
+  /*Tablas habilidades*/
+
+  .habs-ides div table {
+    padding-top: 4rem;
+  }
 
   /*Mis proyectos*/
-  .mis-proyectos{
-  height: 230vh;
+  .mis-proyectos {
+    height: 230vh;
   }
 
   .grid-proyectos {
@@ -899,29 +1036,12 @@ figure {
 
     scale: 70%;
   }
-  .proyecto-datos {
-    background-color: rgba(125, 118, 118, 0.635);
-    width: rem;
-    height: 7.5rem;
-    width: 35rem;
-    width: 35rem;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding-top: 0.3rem;
-    padding-bottom: 0.3rem;
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-  }
 
   .proyecto1,
   .proyecto2,
   .proyecto3,
   .proyecto4 {
     background-blend-mode: normal;
-
   }
 
   .proyecto1 {
@@ -939,6 +1059,11 @@ figure {
   .proyecto4 {
     grid-area: 4 / 1 / 5 / 2;
   }
+}
+
+/*footer*/
+.footer {
+  text-align: center;
 }
 
 /* Animaciones */
