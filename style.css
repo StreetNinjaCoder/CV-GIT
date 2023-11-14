@@ -1,5 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Oswald:200,300,regular,500,600,700);
-
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Oswald:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 *,
 ::before,
 ::after {
@@ -68,7 +68,7 @@
   --sombra-seccion: #ddd;
   --fondo-seccion: #9e9e9e;
 
-  --fondo-hero: rgba(10, 202, 202, 0.24);
+  --fondo-hero: rgba(0, 255, 255, 0.362);
   --gradiente-hero-a: #3ec7c7;
   --gradiente-hero-b: #024747;
   --boton-hero-a: #49e4b0;
@@ -76,8 +76,8 @@
 
   --gradiente-sobremi-a: rgb(127, 145, 141);
   --gradiente-sobremi-b: rgb(153, 153, 153);
-  --boton-sobre-mi-a: rgb(39, 195, 195);
-  --boton-sobre-mi-b: rgb(11, 130, 130);
+  --boton-sobre-mi-a: rgb(17, 213, 213);
+  --boton-sobre-mi-b: rgb(24, 162, 162);
   --minombre-a: rgb(70, 221, 221);
   --minombre-b: rgb(13, 100, 176);
   --subtitulo-a: rgb(39, 125, 125);
@@ -103,8 +103,8 @@ html {
 }
 
 body {
-  margin: 0;
   font-family: "Oswald", Helvetica, sans-serif;
+  margin: 0;
   overflow-x: scroll;
 
   background: linear-gradient(
@@ -120,6 +120,7 @@ a {
 }
 
 .tituloSeccion {
+  font-family: "Oswald", Helvetica, sans-serif;
   margin-top: 4rem;
   margin-bottom: 3rem;
   display: flex;
@@ -181,6 +182,8 @@ a {
 
 /*Botones NAV*/
 .boton {
+  font-family: "Oswald", Helvetica, sans-serif;
+
   font-weight: 700;
   letter-spacing: 1px;
   height: 3rem;
@@ -301,14 +304,18 @@ a {
 /*Boton presentacion*/
 .presentacion div:nth-child(1) {
   font-weight: 300;
+  font-family: "Oswald", Helvetica, sans-serif;
 
   font-size: 3rem;
   margin-bottom: -1rem;
 }
 
 .presentacion div:nth-child(2) {
+  font-family: "rale", Helvetica, sans-serif;
+  padding-top: 1rem;
   font-weight: 700;
   font-size: 3rem;
+  text-transform: uppercase;
   text-shadow: 4px 4px var(--sombra-seccion);
   margin-bottom: 1rem;
 }
@@ -316,18 +323,22 @@ a {
 .presentacion div:nth-child(3) {
   font-weight: 100;
   font-size: 1.8rem;
+  font-family: "Oswald", Helvetica, sans-serif;
+
   text-decoration: underline;
 }
 
 /*Boton del inicio*/
 
 .boton-hero {
+  font-family: "Oswald", Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  font-weight: 700;
   margin-top: 3rem;
   width: 20rem;
   height: 8rem;
-  font-size: 3rem;
   border-radius: 4rem;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -346,6 +357,8 @@ a {
 .boton-hero a {
   color: var(--texto-seccion);
   text-decoration: none;
+
+
 }
 .boton-hero:hover {
   animation: gradientAnim 1s ease infinite;
@@ -365,7 +378,6 @@ a {
   width: 100vw;
   padding-top: 4rem;
   gap: 2rem;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -405,11 +417,13 @@ a {
 
 .mi-nombre {
   width: 80%;
+  font-family: "Oswald", Helvetica, sans-serif;
   background: linear-gradient(
     200deg,
     var(--minombre-a) 0%,
     var(--minombre-b) 100%
   );
+  text-transform: uppercase;
   text-shadow: -4px -2px var(--texto-seccion);
   background-clip: text;
   color: transparent;
@@ -420,6 +434,8 @@ a {
 }
 
 .subtitulo {
+  font-family: "Oswald", Helvetica, sans-serif;
+
   margin-top: 2rem;
   background: linear-gradient(
     200deg,
@@ -431,7 +447,7 @@ a {
   background-clip: text;
   color: transparent;
   width: 80%;
-  font-weight: lighter;
+  font-weight: 400;
 }
 
 .socials {
@@ -494,6 +510,7 @@ a {
 /*Resumen*/
 
 .resumen {
+  font-family: "Oswald", Helvetica, sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -523,6 +540,8 @@ a {
 }
 
 .habilidad-boton {
+  font-family: "Oswald", Helvetica, sans-serif;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -632,6 +651,8 @@ a {
 }
 
 .grid-habilidades div table caption {
+  font-family: "Raleway", Helvetica, sans-serif;
+
   color: var(--texto-seccion);
 
   text-transform: uppercase;
@@ -640,6 +661,7 @@ a {
 }
 
 .grid-habilidades div table th {
+  font-family: "Oswald", Helvetica, sans-serif;
   text-align: center;
   padding: 1rem;
   padding-left: 3rem;
@@ -740,6 +762,8 @@ figure {
 /*footer de la pagina*/
 
 .footer {
+  font-family: "Raleway", Helvetica, sans-serif;
+
   margin-top: 20vh;
   width: 100vw;
   height: 10rem;
@@ -761,6 +785,8 @@ figure {
 
 /*Pagina mis proyectos*/
 .tituloProyectos {
+  font-family: "Raleway", Helvetica, sans-serif;
+
   margin-top: 8rem;
   margin-bottom: 4rem;
   padding-left: 2rem;
@@ -926,6 +952,9 @@ figure {
 
   .mImage img {
     height: 3rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    background-color: var(--img-background);
   }
 
   /*Menu Hamburguesa*/
